@@ -4,8 +4,7 @@ RUN mkdir -p ~/app/node_modules
 
 WORKDIR /home/foo/app
 
-COPY yarn.lock yarn.lock
-COPY package.json package.json
+ADD . /home/foo/app
 
 RUN adduser foo
 RUN chown -R foo /home/foo
@@ -20,7 +19,5 @@ RUN npm install --global yarn
 RUN ls -la ~/app
 
 RUN yarn install
-
-ADD . /home/foo/app
 
 CMD bash
