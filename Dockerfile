@@ -18,6 +18,6 @@ RUN npm install --global yarn
 
 RUN ls -la ~/app
 
-RUN yarn install
+RUN cd client && yarn install
 
 CMD bash
