@@ -1,4 +1,4 @@
-FROM node
+FROM rh389/node-base:latest
 
 RUN mkdir -p ~/app/node_modules
 
@@ -11,10 +11,6 @@ RUN chown -R foo /home/foo
 RUN chown -R foo /usr/local
 
 USER foo
-
-RUN npm install --global yarn
-
-
 
 RUN ls -la ~/app
 
