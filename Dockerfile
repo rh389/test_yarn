@@ -2,15 +2,9 @@ FROM rh389/node-base:latest
 
 RUN mkdir -p ~/app/node_modules
 
-WORKDIR /home/foo/app
+WORKDIR /home/yarnuser/app
 
-ADD . /home/foo/app
-
-RUN adduser foo
-RUN chown -R foo /home/foo
-RUN chown -R foo /usr/local
-
-USER foo
+ADD . /home/yarnuser/app
 
 RUN ls -la ~/app
 
